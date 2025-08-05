@@ -6,11 +6,12 @@
 /*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:21:38 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/08/05 14:24:09 by mlaussel         ###   ########.fr       */
+/*   Updated: 2025/08/05 15:26:58 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <cmath>
 
 const int Fixed::_bit = 8;
 
@@ -51,6 +52,7 @@ Fixed &Fixed::operator=(Fixed const & rs)
 Fixed::Fixed(const int intValue)
 {
 	std::cout << GREEN << "Int constructor called" << STOP << std::endl;
+	this->_n = intValue << this->_bit;
 }
 
 Fixed::Fixed(const float floatValue)
