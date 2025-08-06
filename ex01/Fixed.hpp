@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 11:32:32 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/08/05 14:16:22 by mlaussel         ###   ########.fr       */
+/*   Updated: 2025/08/06 11:28:29 by mathildelau      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

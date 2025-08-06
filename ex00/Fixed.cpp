@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:21:38 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/08/05 14:04:35 by mlaussel         ###   ########.fr       */
+/*   Updated: 2025/08/06 11:44:58 by mathildelau      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,45 @@
 
 const int Fixed::_bit = 8;
 
-//constructor
+/* ************************************************************************** */
+/*                               CANONICAL FORM                               */
+/* ************************************************************************** */
+
+/**
+ * @brief Default constructor. 
+ * Initializes the fixed-point number to 0.
+ */
 Fixed::Fixed() : _n(0)
 {
 	std::cout << GREEN << "Default constructor called" << STOP << std::endl;
 }
 
-//destructor
+/**
+ * @brief Destructor.
+ * Called when at the end.
+ */
 Fixed::~Fixed()
 {
 	std::cout << RED << "Destructor called" << STOP << std::endl;
 }
 
-//copy
+/**
+ * @brief Copy constructor.
+ * Creates a new Fixed object as a copy of another.
+ * @param f The Fixed object to copy.
+ */
 Fixed::Fixed(Fixed const &f)
 {
 	std::cout << GREEN << "Copy constructor called" << STOP << std::endl;
 	*this = f;
 }
 
-//operator
+/**
+ * @brief Copy assignment operator.
+ * Assigns the value of another Fixed object to this one.
+ * @param rs The Fixed object to copy.
+ * @return A reference to this Fixed object.
+ */
 Fixed &Fixed::operator=(Fixed const & rs)
 {
 	std::cout << GREEN << "Copy assignment operator called" << STOP << std::endl;
@@ -42,14 +61,24 @@ Fixed &Fixed::operator=(Fixed const & rs)
 	return (*this);
 }
 
-//getters
+/* ************************************************************************** */
+/*                             GETTERS & SETTERS                              */
+/* ************************************************************************** */
+
+/**
+ * @brief Returns the raw fixed-point value.
+ * @return The raw integer value representing the fixed-point number.
+ */
 int	Fixed::getRawBits() const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_n);
 }
 
-//setters
+/**
+ * @brief Sets the raw fixed-point value.
+ * @param raw The raw integer value to set.
+ */
 void	Fixed::setRawBits(int const raw)
 {
 	this->_n = raw;
