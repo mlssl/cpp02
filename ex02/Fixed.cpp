@@ -6,7 +6,7 @@
 /*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:21:38 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/08/06 14:46:52 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/08/07 14:03:39 by mathildelau      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,22 +193,33 @@ Fixed Fixed::operator-(Fixed const & rs)
 	return (result);
 }
 
+/**
+ * @brief 
+ * 
+ * >> : Convert a fixed point to an int. Divide by 256 (2⁸)
+ * 
+ * If we multiply, the numbers will be too large so we divide by bit.
+ */
 Fixed Fixed::operator*(Fixed const & rs)
 {
 	Fixed result;
-	result.setRawBits(this->_n * rs.getRawBits());
-	//result.setRawBits((this->_n >> _bit )* rs.getRawBits());
+	result.setRawBits((this->_n * rs.getRawBits()) >> _bit);
 	return (result);
 }
 
+/**
+ * @brief 
+ * 
+ * << : Converts an int to a fixed-point. Multiplies by 256 (2⁸)
+ * 
+ * If we only do one division, we lose precision so we multiply by bit.
+ */
 Fixed Fixed::operator/(Fixed const & rs)
 {
     Fixed result;
-	result.setRawBits(this->_n / rs.getRawBits());
-    //result.setRawBits((this->_n << _bit) / rs.getRawBits());
+    result.setRawBits((this->_n / rs.getRawBits()) << _bit);
     return (result);
 }
-
 
 /* ************************************************************************** */
 /*                                 INCREMENT AND DECREMENT                    */
