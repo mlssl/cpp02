@@ -6,14 +6,14 @@
 /*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 12:21:38 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/08/07 15:42:58 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/08/08 10:11:51 by mathildelau      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <cmath>
 
-const int Fixed::_bit = 16;
+const int Fixed::_bit = 8;
 
 /* ************************************************************************** */
 /*                               CANONICAL FORM                               */

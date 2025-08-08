@@ -9,7 +9,7 @@ OBJ_DIR = ./obj
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = canon
+NAME = fixed
 
 all: $(NAME)
 
